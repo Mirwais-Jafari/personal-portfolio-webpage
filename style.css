@@ -1,0 +1,123 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0px;
+  display: grid;
+}
+.nav { display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0px; left: 0px;
+    width: 100%;
+    background-color: rgb(197, 37, 37);
+}
+
+.nav-list { display: flex;
+    margin-right: 2rem;
+    list-style-type: none;
+}
+
+@media (max-width: 28.75em) {
+  .nav { justify-content: center; }
+  .nav-list { margin: 0px 1rem; }
+}
+
+.nav-list a {
+    display: block;
+    font-size: 2.2rem;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+ul.nav-list li a:hover{
+    background-color: rgb(231, 11, 11);
+}
+#welcome-section{
+    background-color: rgb(9, 11, 39);
+    animation-name: rainbow;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    height: 100vh;
+}
+@keyframes rainbow{
+    0%{
+        background-image: linear-gradient(to bottom, black 50%, red, green);
+    }
+    50%{
+        background-image: linear-gradient(to right, red,black,green);
+    }
+    100%{
+        background-image: linear-gradient(to left, green,red,black);
+    }
+}
+.welcome-title{
+    color: white;
+    text-align: center;
+    padding-top: 40vh;
+}
+#projects{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(3,auto);
+    gap: 4rem;
+    width: 100%;
+    background-color: rgb(73, 73, 247);
+    padding-bottom: 30px;
+}
+.projects-title{
+    background-color: rgb(73, 73, 247);
+    text-decoration: underline;
+    text-align: center;
+    color: white;
+}
+
+.project-image{
+    background-color: rgb(31, 22, 22);
+    text-align: center;
+    padding-top: 20px;
+    margin: 0px 20px;
+    border-radius: 5px;
+}
+.project-image img{
+    max-width: 100%;
+    height: auto;
+}
+.project-tile a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: x-large;
+}
+
+.project-title{
+    color: white;
+}
+
+#contact{
+    background-color: rgb(34, 28, 28);
+    height: 100vh;
+}
+.contact-section-header{
+    text-align: center;
+    font-size: 1.8em;
+    padding-top: 50px;
+    color: white;
+}
+.contact-links{
+    text-align: center;
+}
+.contact-links a{
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+}
+.contact-links a:hover{
+    background-color: rgb(51, 47, 47);
+    padding: 5px 3px;
+    font-weight: bolder;
+    border-radius: 5px;
+    border: 1px groove black;
+}
